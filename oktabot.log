@@ -1,0 +1,23 @@
+[2025-07-20 13:48:20][INFO] ============================================================
+[2025-07-20 13:48:20][INFO] 🚀 OKTABOT ENHANCED PRODUCTION SYSTEM
+[2025-07-20 13:48:20][INFO] ============================================================
+[2025-07-20 13:48:20][INFO] ✅ Configuration loaded from config.json
+[2025-07-20 13:48:20][INFO] 🚀 Starting Oktabot Production Pipeline
+[2025-07-20 13:48:20][INFO] 🎬 Starting Manual Mode...
+[2025-07-20 13:48:20][INFO] Selected channel: Nolmuş TV
+[2025-07-20 13:48:20][INFO] Project path: channels/Nolmus_TV/Neandertallerin_Gizemi
+[2025-07-20 13:48:20][INFO] Status loaded successfully
+[2025-07-20 13:48:20][INFO] Hash status loaded successfully
+[2025-07-20 13:48:20][INFO] 🎯 Step 1: Scriptwriting
+[2025-07-20 13:48:20][INFO] Running: python modules/scriptwriter.py Nolmuş TV Neandertallerin Gizemi 1500 --output_path channels/Nolmus_TV/Neandertallerin_Gizemi/script.txt --config_path config.json
+[2025-07-20 13:48:21][ERROR] ❌ scriptwriter module failed: Command failed (code 1): Traceback (most recent call last):
+  File "/app/modules/scriptwriter.py", line 7, in <module>
+    from google import genai
+ImportError: cannot import name 'genai' from 'google' (unknown location)
+
+[2025-07-20 13:48:21][ERROR] ❌ scriptwriter failed permanently: scriptwriter failed: Command failed (code 1): Traceback (most recent call last):
+  File "/app/modules/scriptwriter.py", line 7, in <module>
+    from google import genai
+ImportError: cannot import name 'genai' from 'google' (unknown location)
+
+[2025-07-20 13:48:21][CRITICAL] ❌ PRODUCTION FAILED: Scriptwriter module failed

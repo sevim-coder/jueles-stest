@@ -1,0 +1,139 @@
+{
+  "channels": {
+    "İlham Perisi": {
+      "slug": "Ilham_Perisi",
+      "prompt_instruction": "You're a guide who speaks in a warm and sincere tone about topics that inspire and empower women."
+    },
+    "Perspektif": {
+      "slug": "Perspektif",
+      "prompt_instruction": "You're a historian and thinker who objectively and deeply analyzes events."
+    },
+    "Nolmuş TV" : {
+      "slug" : "Nolmus_TV",
+      "prompt_instruction": "You're an experienced commentator, reporter, and documentarian who narrates interesting events, whether developing or historical, in an entertaining and captivating way."
+    },
+    "Nolmuş Çocuk": {
+      "slug": "Nolmus_Cocuk",
+      "prompt_instruction": "You're a wise person who talks about fun, light, and everyday topics in a cheerful way, and you get along great with kids."
+    },
+    "Sahne ve Sanat": {
+      "slug": "Sahne_ve_Sanat",
+      "prompt_instruction": "You're an art historian, film critic, and opera and theater audience member who narrates art and culture topics in an impressive way."
+    },
+    "Techsen": {
+      "slug": "Techsen",
+      "prompt_instruction": "You're a technology expert who explains technological developments in a clear and understandable way. You're also a gamer."
+    }
+  },
+  "ai_models": {
+    "scriptwriter": {
+      "model_name": "gemini-2.5-flash",
+      "rate_limit": {
+        "requests_per_minute": 15,
+        "cooldown_seconds": 4
+      }
+    },
+    "director": {
+      "model_name": "gemini-2.5-pro",
+      "rate_limit": {
+        "requests_per_minute": 15,
+        "cooldown_seconds": 4
+      }
+    },
+    "narrator": {
+      "model_name": "gemini-2.5-flash-preview-tts",
+      "rate_limit": {
+        "requests_per_minute": 10,
+        "cooldown_seconds": 6
+      }
+    },
+    "image_director": {
+      "model_name": "imagen-3.0-generate-002",
+      "rate_limit": {
+        "requests_per_minute": 5,
+        "cooldown_seconds": 12
+      }
+    }
+  },
+  "available_options": {
+    "narrators": [
+      { "name": "Aoede", "description": "Breezy, middle pitch, female" },
+      { "name": "Kore", "description": "Firm and confident, female" },
+      { "name": "Callirhoe", "description": "Easy-going and relaxed, female" },
+      { "name": "Charon", "description": "Informative and clear, male" },
+      { "name": "Sadaltager", "description": "Knowledgeable and authoritative, male" }
+    ],
+    "internal_effects": {
+      "types": ["still", "zoom", "pan"],
+      "directions": ["in", "out", "left", "right", "up", "down", "none"],
+      "speeds": ["very_slow", "slow", "normal", "fast"]
+    },
+    "transition_effects": ["fade", "cut", "fadeblack", "dissolve", "wipe"],
+    "aspect_ratios": ["16:9", "9:16", "1:1", "4:3", "3:4"],
+    "music_styles": [
+      "Hüzünlü ve Gizemli Atmosferik",
+      "Epik Belgesel", 
+      "Sakin ve Rahatlatıcı",
+      "Neşeli ve Enerjik",
+      "Sinematik ve Dramatik",
+      "Minimal ve Modern",
+      "Klasik ve Zarafet",
+      "Doğa ve Huzur"
+    ],
+    "visual_styles": [
+      "Photorealistic documentary",
+      "Cinematic dramatic", 
+      "Artistic and aesthetic",
+      "Modern and clean",
+      "Vintage and nostalgic",
+      "Abstract and conceptual",
+      "Natural and organic"
+    ]
+  },
+  "technical_defaults": {
+    "video_codec": "libx264",
+    "video_bitrate": "8000k", 
+    "audio_codec": "aac",
+    "audio_bitrate": "192k",
+    "fps": 30,
+    "youtube_category": "Education",
+    "privacy_status": "private"
+  },
+  "quota_errors": [
+    "quota", "rate limit", "429", "too many requests", "resource exhausted"
+  ],
+  "asset_verification": {
+    "min_image_size_kb": 1,
+    "min_audio_duration_seconds": 0.1,
+    "max_file_age_days": 30,
+    "verify_before_editor": true
+  },
+  "retry_policies": {
+    "quota_errors": {
+      "max_retries": 5,
+      "base_delay_seconds": 60,
+      "exponential_backoff": true
+    },
+    "network_errors": {
+      "max_retries": 3,
+      "base_delay_seconds": 30,
+      "exponential_backoff": true
+    },
+    "disk_errors": {
+      "max_retries": 2,
+      "base_delay_seconds": 15,
+      "exponential_backoff": false
+    },
+    "system_errors": {
+      "max_retries": 3,
+      "base_delay_seconds": 30,
+      "exponential_backoff": true
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "oktabot.log",
+    "max_size_mb": 50,
+    "backup_count": 5
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "monday": {
+    "channel_name": "Nolmuş Çocuk",
+    "video_topic": "Evrenin En Gizemli Kara Delikleri",
+    "target_char_count": 8000
+  },
+  "tuesday": {
+    "channel_name": "Techsen",
+    "video_topic": "Yapay Zekanın Geleceği ve Etik Sorunlar",
+    "target_char_count": 10000
+  },
+  "wednesday": {
+    "channel_name": "Sahne ve Sanat",
+    "video_topic": "Barok Dönemi Tiyatrosunun Tarihsel Gelişimi",
+    "target_char_count": 6000
+  },
+  "thursday": {
+    "channel_name": "Perspektif",
+    "video_topic": "Yapay Dünyalar: Simülasyon Teorisi",
+    "target_char_count": 8000
+  },
+  "friday": {
+    "channel_name": "İlham Perisi",
+    "video_topic": "Moda Neden Tekrarlanıyor?",
+    "target_char_count": 7000
+  }
+}
